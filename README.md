@@ -1,40 +1,40 @@
-# 🚗 Vehicle Price Prediction
+# Vehicle Price Prediction
 
-A machine learning project to predict used vehicle prices based on key features such as year, mileage, cylinders, and optionally categorical features like make, model, fuel type, etc.
+A machine learning project to predict used vehicle prices based on key features such as year, mileage, cylinders, and optionally categorical features like make, model, and fuel type.
 
 ---
 
-## 📂 Project Structure
-
+## Project Structure
 ```
-🔹 app.py                  # Streamlit / Flask app for deployment
-🔹 vehicle_price_model.pkl  # Trained machine learning model
-🔹 requirements.txt         # Python dependencies
-🔹 dataset.csv               # Sample dataset (raw)
-🔹 README.md                # Project documentation
+app.py # Streamlit / Flask app for deployment
+vehicle_price_model.pkl # Trained machine learning model
+requirements.txt # Python dependencies
+dataset.csv # Sample dataset (raw)
+README.md # Project documentation
 ```
 
 ---
 
-## 💡 Problem Statement
+## Problem Statement
 
-Used car prices are influenced by various factors like manufacturing year, mileage, engine specs, brand, and model. This project aims to build a machine learning model that can reasonably predict the resale price of a car given these features.
+Used car prices are influenced by various factors such as manufacturing year, mileage, engine specifications, brand, and model.  
+This project aims to develop a machine learning model that can predict the resale price of a car based on these features.
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 - **Python 3.x**
 - **LightGBM** (Regressor)
 - **pandas**, **numpy** (Data handling)
 - **scikit-learn** (Utilities)
 - **joblib** (Model persistence)
-- **Streamlit** (For interactive UI)
-- *(Optionally Flask if deploying via API)*
+- **Streamlit** (Interactive UI)
+- *(Optional: Flask for API deployment)*
 
 ---
 
-## 🚀 Project Features
+## Project Features
 
 - Predicts resale price of vehicles using simple numeric inputs (`year`, `mileage`, `cylinders`).
 - Can be extended to include categorical features (`make`, `model`, etc.).
@@ -42,78 +42,47 @@ Used car prices are influenced by various factors like manufacturing year, milea
 
 ---
 
-## 📝 How to Use
+## How to Use
 
-### 1️⃣ Clone the Repository
+### 1. Clone the Repository
 
-```bash
+```
 git clone https://github.com/Kartik1006/Vehicle-price-prediction.git
 cd vehicle-price-prediction
 ```
-
-### 2️⃣ Install Dependencies
-
-```bash
+### 2. Install Dependencies
+```
 pip install -r requirements.txt
 ```
-
-### 3️⃣ Run Streamlit App
-
-```bash
+### 3. Run Streamlit App
+```
 streamlit run app.py
 ```
-
 ---
-
-## 🧑‍💻 Input Features
+## Input Features
 
 | Feature      | Type   | Description                      |
-| ------------ | ------ | -------------------------------- |
+|--------------|--------|----------------------------------|
 | year         | int    | Year of manufacture              |
-| mileage      | int    | Mileage in km/miles              |
+| mileage      | int    | Mileage in kilometers or miles   |
 | cylinders    | int    | Number of cylinders              |
 | *(Optional)* | object | Make, Model, etc. (future scope) |
 
----
 
-## 📈 Output
-
+Output
 Predicted price of the vehicle in dollars (or your preferred currency).
 
 ---
 
-## 📷 Sample Streamlit UI
-
-```
-+-----------------------+
-| Year: [2018]          |
-| Mileage: [45000]      |
-| Cylinders: [4]        |
-| [ Predict Price ]     |
-+-----------------------+
-```
-
-Output:\
-**Predicted Vehicle Price: \$13,850.00**
-
----
-
-## 🔮 Future Improvements
-
+### Future Improvements
 - Incorporate more features (make, model, fuel type, etc.) via label encoding.
 - Extend to API deployment (Flask/FastAPI) for production use.
 
----
+### Known Issues
+- Predictions using only three features may be less accurate.
+- Streamlit must be run using streamlit run app.py and not with python app.py.
 
-## 🏗️ Known Issues
-
-- Predictions with only 3 features are limited and may lack accuracy.
-- Streamlit must be run via `streamlit run app.py`, not as `python app.py`.
-
----
-
-## ⚒️ Requirements
-
+Requirements
 ```
 streamlit
 scikit-learn
@@ -122,15 +91,5 @@ numpy
 joblib
 lightgbm
 ```
-
----
-
-## 🤝 Contributions
-
-Contributions are welcome! Please fork the repository and submit a pull request.
-
----
-
-## 📜 License
-
-[MIT License](https://opensource.org/licenses/MIT)
+### Contributions
+Contributions are welcome. Please fork the repository and submit a pull request.
